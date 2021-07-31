@@ -1,0 +1,56 @@
+{% load static %}
+<nav class="navbar navbar-expand-lg navbar-light bg- sticky-top" style="background-color: #2d618c;">
+    <div class="container">
+        <a href="/" class="navbar-brand text-light">
+            <img src="{% static 'logo.jpg' %} " class="rounded-circle" height=" 50px" width="50px" alt=""></a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menubar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menubar">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a href="/" class="nav-link text-light"><i class="fas fa-home"></i> Home
+                    </a>
+                </li>
+
+
+                <li class="nav-item">
+                    <a href="{% url 'order' %}" class="nav-link text-light"><i class="fas fa-shopping-cart"> Orders</i> </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="{% url 'store' %}" class="nav-link text-light"><i class="fas fa-shopping-cart"> Store</i> </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'signup' %}" class="nav-link text-light"><i class="fas fa-user-plus"> Signup</i> </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-light"><i class="fas fa-sign-out-alt"> Logout</i> </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'login' %}" class="nav-link text-light"><i class="fas fa-sign-in-alt"> Login</i> </a>
+                </li>
+
+            </ul>
+        </div>
+        <div class=" ml-1">
+            <ul class="nav nav-tabs">
+                <a href="#" class="nav-link" style="text-decoration:none;"><span class="text-light"><i class="fas fa-cart-plus"></i></span> <span class="text-light">0</span></a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-user-circle"> Profile</i>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+
+    </div>
+</nav>

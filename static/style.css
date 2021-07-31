@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Potta+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+body{
+    /*background-color: rgb(91, 98, 110);*/
+    background-color: #3776ab;
+}
+
+.navbar{
+    background-color: rgb(102, 255, 51);
+}
+.home{
+   /* min-height: 600px;
+    background-image:
+    linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)),
+    url('{% static "bg.jpg" %}';
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin-bottom: 10px;*/
+    width: 100%;
+}
+.webtitle, .footer-text{
+    font-family: 'Potta One', cursive;
+}
+.leftbar{
+    min-height: 600px;
+    border-right: 1px solid black;
+}
+
+
+/*-----------------------------------------about start--------------*/
+
+.about-section {
+    min-height: 600px;
+}
+
+.about-subtitle {
+    margin-bottom: 7px;
+    padding-left: 7px;
+    font-size: 16px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #aaaaaa;
+    border-left: 3px solid #bfa67a;
+    font-size: 700;
+    font-family: tahoma;
+}
+
+.about-main-title {
+    margin-top: 0;
+    margin-bottom: 37px;
+    font-size: 30px;
+    line-height: 1.27;
+    font-weight: 300;
+}
+
+.about-right-side {
+    min-height: 600px;
+}
+
+
+/*footer section*/
+.footer {
+    min-height: 250px;
+    background-color: rgba(31, 25, 25);
+    clear: both;
+}
+
+hr {
+    background-color: aqua;
+}
+
+.media a {
+    text-decoration: none;
+}
+
+.sbox {
+    height: 50px;
+    width: 50px;
+    border: 1px solid powderblue;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+}
+
+.flinks ul li a {
+    text-decoration: none;
+}
+
+.flinks ul {
+    color: cadetblue;
+}
+
+.flink:hover {
+    transform: rotate(5deg);
+    cursor: pointer;
+}
+
+.name {
+    height: 30px;
+}
+
+/*footer section end*/
+html{
+    overflow-x: hidden;
+}

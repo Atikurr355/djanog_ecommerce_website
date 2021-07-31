@@ -1,0 +1,13 @@
+
+  <nav class=" bg-light my-3" style="background-color: #2d618c; text-decoration: none;">
+      <ul class="list-group">
+        <li class="list-group-item">
+          <a class="link5 text-dark" href="{% url 'store' %}">All Products</a>
+        </li>
+        {% for cat in categories %}
+          <li class="list-group-item">
+          <a class="link5 text-dark" href="?category={{cat.id}}">{{cat.name}}</a>
+        </li>
+        {% endfor %}
+      </ul>
+  </nav>

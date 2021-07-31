@@ -1,0 +1,49 @@
+{% extends 'layouts.html' %}
+{% load static %}
+{% block title %}details-page{% endblock  %}
+
+{% block content %}
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2 bg-light rounded-bottom ml-3 mr-2 my-2">
+                <div class="row">
+                    <div class="col-md-12 bg- m-0 p-3 h4 text-warning" style="background-color: #2d618c;font-family: 'Potta One', cursive;">Categories</div>
+                </div>
+                {% include 'partials/blog_sidebar.html' %}
+                <div class="row">
+                    <div class="col-md-12 bg- m-0 p-3 h4 text-warning" style="background-color: #2d618c;font-family: 'Potta One', cursive;">Relevant links</div>
+                </div>
+                {% include 'partials/rightnav.html' %}
+            </div>
+            
+            <div class="col-md-9 mx- py-2">
+                <div class="col-md-12 h4 text-warning text-center py-3 rounded-top" style="background-color: #2d618c;font-family: 'Potta One', cursive; ">
+                        Your Favorite Blogs
+                    </div>
+                <div class="row">
+                    
+                        
+                        <div class="col-md-12 bg-" >
+                            <div class="card mb-3" style="height:400px; overflow:hidden;">
+                                
+                                <div class="card-body" >
+                                    <h5 class="card-title">{{blog.title}}</h5>
+                                    <p class="card-text">{{blog.artical}}</p>
+                                </div>
+                                <div class="card-footer">
+                                    <p class="card-text"><small class="text-muted">Posted by: {{blog.author}} </small></p>
+                                    <p class="card-text"><small class="text-muted">{{blog.date_of_post|date:"d F, Y h:m:s"}} mins ago</small></p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        
+                    
+                </div>
+            
+          </div>
+      </div>
+    </div>
+
+{% endblock  %}

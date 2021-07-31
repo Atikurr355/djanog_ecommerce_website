@@ -1,0 +1,32 @@
+{% extends 'layouts.html' %}
+{% load static %}
+{% block title %}
+Home-page
+{% endblock  %}
+{% block content %}
+<div class="container-fluid">
+    <div class="row" style="min-height: 600px; 
+    background-image:linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url('{% static "bg.jpg" %}');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size:cover;
+    ">
+        <div class="col-md-12 title text-center d-flex justify-content-center align-items-center" >
+            <div class="text-light">
+                <h1>
+                    <span class="webtitle  font-weight-bold text-light">Welcome to our </span>
+                    <span class="webtitle  font-weight-bold text-warning">Fashion </span>
+                    <strong class="webtitle text-warning  font-weight-bold" >Store </strong>
+                </h1><br>
+            <h1 style="font-family: 'Titillium Web', sans-serif;">Creative Fashion Store</h1>
+                <h1 class="fas fa-h1    ">{% now "D, d-M-Y h:i" %}</h1><br>
+            <a href="#" class="btn btn-warning">Learn More...</a>
+            </div>
+            
+            
+        </div>
+    </div>
+
+</div>
+
+{% endblock  %}

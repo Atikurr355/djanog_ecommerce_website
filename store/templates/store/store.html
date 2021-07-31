@@ -1,0 +1,61 @@
+{% extends 'store/base.html' %}
+{% load static %}
+{% block title %}Store{% endblock  %}
+
+{% block content %}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2 bg-light  ml-3 my-2 rounded-bottom">
+            <div class="row">
+                <div class="col-md-12 bg- m-0 p-3 h3 text-light" style="background-color: #2d618c; font-family: 'Potta One', cursive;">Categories</div>
+            </div>
+            {% include 'store/left_nav.html' %}
+        </div>
+        <div class="col-md-9">
+            <div class="row my-2 mx-auto">
+                <div class="col-md-12 h4 text-warning text-center py-3 rounded-top" style="background-color: #2d618c;font-family: 'Potta One', cursive; ">
+                    Your Favorite Products
+                </div>
+
+            </div>
+            <div class="row">
+                {% for prd in page_obj %}
+
+                <div class="col-md-3 my-3">
+                    <div class="card " height="400px">
+                        <img class="card-img-top" src={{prd.image.url}} height="250px" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title"> {{prd.name|slice:16}}.. </h5>
+                            <p>Price: {{prd.price}} BDT.</p>
+                            <p class="card-text">{{prd.desc}}</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#" class="btn btn-warning btn-block">View</a>
+                            <div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {% endfor %}
+
+            </div>
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                    <li class="page-item"> {% if page_obj.has_previous %}
+                        <a href="?page={{page_obj.previous_page_number}}" class="page-link">Previous</a>
+                        {% endif %}
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">{{page_obj.number}}</a></li>
+
+                    <li class="page-item">{% if page_obj.has_next %}
+                        <a href="?page={{page_obj.next_page_number}}" class="page-link">Next</a>
+                        {% endif %}
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+
+        {% endblock  %}

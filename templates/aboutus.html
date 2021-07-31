@@ -1,0 +1,45 @@
+{% extends 'layouts.html' %}
+{% load static %}
+{% block title %}
+Aboutus-page
+{% endblock  %}
+
+ {% block content %} 
+    <!---------About section start-------->
+        <div class="about-section bg-info pb-3" id="about">
+            <div class="container">
+            
+                <div class="row ">
+                    <div class="col-md-6 d-flex justify-content-center align-items-center">
+                        <div class="about-title text-light"><br>
+                            <div class="about-subtitle text-warning" style="font-family: 'Titillium Web', sans-serif;">
+                                About Us
+                            </div>
+                            <div class="about-main-title text-uppercase">
+                                 <strong class="text-warning"> </strong>
+                            </div>
+                            <div class="about-description" style="font-family: 'Titillium Web', sans-serif;">
+                                {{about.desc}}
+                            </div>
+                            <button type="button" class="btn btn-outline-primary text-light float-right mt-5 text-uppercase"> read more</button>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 about-right-side d-flex justify-content-center align-items-center  ">
+                        <div class="about-box float-right">
+                            <div class="about-inner-box d-flex justify-content-center align-items-center">
+                                <a href="" class="videopopup">
+                                    <img src="{{about.image.url}} " class="img-fluid rounded" height="300px" alt="image"><br>
+
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        </div>
+        <!---------About section end-------->
+ {% endblock %}

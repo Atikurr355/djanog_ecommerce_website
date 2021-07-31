@@ -1,0 +1,50 @@
+{% extends 'layouts.html' %}
+{% load static %}
+{% block title %}blog-page{% endblock  %}
+
+{% block content %}
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2 bg-light rounded-bottom ml-3 mr-2 my-2">
+                <div class="row">
+                    <div class="col-md-12 bg- m-0 p-3 h4 text-warning" style="background-color: #2d618c;font-family: 'Potta One', cursive;">Categories</div>
+                </div>
+                {% include 'partials/blog_sidebar.html' %}
+                <div class="row">
+                    <div class="col-md-12 bg- m-0 p-3 h4 text-warning" style="background-color: #2d618c;font-family: 'Potta One', cursive;">Relevant links</div>
+                </div>
+                {% include 'partials/rightnav.html' %}
+            </div>
+            
+            <div class="col-md-9 mx- py-2">
+                <div class="col-md-12 h4 text-warning text-center py-3 rounded-top" style="background-color: #2d618c;font-family: 'Potta One', cursive; ">
+                        Your Favorite Blogs
+                    </div>
+                <div class="row">
+                    
+                        {% for blg in blog %}
+                        <div class="col-md-4 bg-" >
+                            <div class="card mb-3" style="height:400px; overflow:hidden;">
+                                <img class="card-img-top" src="{{blg.image.url}}" height="250px" alt="{{blg.title}}">
+                                <div class="card-body" style="height:105px; overflow:hidden;">
+                                    <h5 class="card-title">{{blg.title}}</h5>
+                                    <a name="" id="" class="btn btn-primary btn-block" href="{% url 'details' %}" role="button">Details...</a>
+                                    <p class="card-text">{{blg.artical}}</p>
+                                </div>
+                                <div class="card-footer"style="height:50xp; overflow:hidden;">
+                                    <p class="card-text"><small class="text-muted">Posted by: {{blg.author}} </small></p>
+                                    <p class="card-text"><small class="text-muted">{{blg.date_of_post|date:"d F, Y h:m:s"}} mins ago</small></p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    
+                </div>
+            
+          </div>
+      </div>
+    </div>
+
+{% endblock  %}
